@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIRST</title>
+    <title>SECOND</title>
     <style>
         body{
             height: 100vh;
@@ -12,52 +12,69 @@
             justify-content: center;
             align-items: center;
         }
-        .container{position: relative;
+        .container{
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
             width: 110px;
             height: 110px;
-            box-shadow: 1px 1px 5px #000;
+            box-shadow: 0px 0px 200px #000000;
+            border: solid 3px #000;
             outline: none;
             border-radius: 50%;
             cursor: pointer;
             overflow: hidden;
+            transition: transform .5s ease-in-out;
+            transition-delay: .5s;
+        }
+        .container.active{
+            transform: rotate(45deg);
         }
         .container span{
             position: absolute;
             border-radius: 4px;
-            height: 4px;
-            width: 55%;
-            background: #000;
+            height: 3px;
+            width: 50%;
+            background: #000000;
         }
         .container span:first-child{
             transform: translateY(-17px);
-            left: 15px;
+            width: 25%;
+            /* left: 15px; */
             transition: transform .5s ease-in-out;
         }
         .container.active span:first-child{
-            transform: translateX(10px) rotate(45deg);
+            transform: translateX(-10px) rotate(360deg) scaleX(1.4);
         }
-        .container span:nth-child(2){
-            transform: scaleX(0.5);
+        .container span:nth-child(2){ 
             transition: transform .5s ease-in-out;
         }
         .container.active span:nth-child(2){
             transform: translateX(150%);
         }
+        .container span:nth-child(3){ 
+            transform: translateY(-110px) rotate(90deg);
+            background: #000000;
+            transition: transform .5s ease-in-out;
+        }
+        .container.active span:nth-child(3){
+            transform: translateY(0) rotate(90deg);
+        }
         .container span:last-child{
             transform: translateY(17px);
-            right: 15px;
+            width: 25%;
+            /* right: 15px; */
             transition: transform .5s ease-in-out;
         }
         .container.active span:last-child{
-            transform: translateX(-10px) rotate(-45deg);
+            transform: translateX(10px) rotate(-360deg) scaleX(1.4);
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <span></span>
         <span></span>
         <span></span>
         <span></span>

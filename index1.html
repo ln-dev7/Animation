@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRST</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 110px;
+            height: 110px;
+            box-shadow: 1px 1px 5px #1863ff;
+            outline: none;
+            border-radius: 10px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .container span{
+            position: absolute;
+            border-radius: 4px;
+            height: 4px;
+            width: 55%;
+            background: #1863ff;
+        }
+        .container span:first-child{
+            transform: translateY(-17px);
+            left: 15px;
+            transition: transform .5s ease-in-out;
+        }
+        .container.active span:first-child{
+            transform: translateX(10px) rotate(45deg);
+        }
+        .container span:nth-child(2){
+            transform: scaleX(0.5);
+            transition: transform .5s ease-in-out;
+        }
+        .container.active span:nth-child(2){
+            transform: translateX(150%);
+        }
+        .container span:last-child{
+            transform: translateY(17px);
+            right: 15px;
+            transition: transform .5s ease-in-out;
+        }
+        .container.active span:last-child{
+            transform: translateX(-10px) rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <script>
+        let container = document.querySelector('.container');
+        container.addEventListener('click', () => {
+            container.classList.toggle('active');
+        })
+    </script>    
+</body>
+</html>

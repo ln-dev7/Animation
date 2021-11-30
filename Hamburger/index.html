@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HAMBURGER CARD</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>N° 1</h1>
+            <h2>GIGA BURGER</h2>
+            <div class="card-card">
+                <div class="card-card-body">
+                    <p>
+                        Un pain moelleux avec éclats de maïs, une sauce épicée façon cajun, des oignons croustillants, des tranches de bacon, des tranches de cheddar fondu et un irrésistible poulet pané croustillant !
+                    </p>
+                </div>
+                <div class="card-card-footer">
+                    <span>$5</span>
+                    <button>Commander</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Effet magnifique du hover -->
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll('.card'),
+        {
+            max: 25,
+            speed: 400,
+            "max-glare": 0.5,
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap");
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  height: 550px;
+  width: 380px;
+  border-radius: 5px;
+  outline: none;
+  overflow: hidden;
+  -webkit-box-shadow: 1px 1px 40px #000000a1;
+          box-shadow: 1px 1px 40px #000000a1;
+  background-image: url(img/burger-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  -webkit-transition: background-image s ease;
+  transition: background-image s ease;
+}
+
+.container .card h1 {
+  position: absolute;
+  top: -25px;
+  right: 25px;
+  font-size: 9em;
+  color: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
+
+.container .card h2 {
+  font-weight: 700;
+  font-size: 40px;
+  color: #fff;
+  font-family: 'Dancing Script', cursive;
+}
+
+.container .card-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 1px 1px 40px #000000d3;
+          box-shadow: 1px 1px 40px #000000d3;
+  margin: 0.5rem;
+  border-radius: 4px;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
+.container .card-card-body p {
+  text-align: center;
+  margin: 1rem;
+  padding: 1rem;
+  font-weight: bold;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container .card-card-footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .card-card-footer span {
+  padding: 0.8rem;
+  margin: 1em;
+  font-weight: 500;
+  background: #fff;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.container .card-card-footer span:hover {
+  background: #000;
+  color: #fff;
+}
+
+.container .card-card-footer button {
+  position: relative;
+  background: #ff9717;
+  border: none;
+  padding: 1rem;
+  margin: 1em;
+  font-weight: 500;
+  color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container .card-card-footer button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+  height: 200%;
+  width: 110%;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+}
+
+.container .card-card-footer button:hover::before {
+  -webkit-transform: translate(-18%, -50%);
+          transform: translate(-18%, -50%);
+  background: #ffffff57;
+}
+/*# sourceMappingURL=style.css.map */

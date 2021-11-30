@@ -1,0 +1,86 @@
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Melvetica, sans-serif;
+  background: #575454;
+}
+
+.inpwrap {
+  width: 70%;
+  max-width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.inpwrap span {
+  position: absolute;
+  left: 5px;
+  top: 90px;
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+.inpwrap .inp-anim {
+  width: 100%;
+  padding: 25px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 25px;
+  -webkit-transition: border .2s ease-out;
+  transition: border .2s ease-out;
+}
+
+.inpwrap label {
+  font-size: 25px;
+  position: absolute;
+  color: #333;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding-left: 25px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.inpwrap:focus-within label {
+  top: -24px;
+  padding-left: 2px;
+  color: #e2aa0f;
+}
+
+.inpwrap.active-input label {
+  top: -24px;
+  padding-left: 2px;
+  color: #10cc84;
+}
+
+.inpwrap:focus-within .inp-anim {
+  border: 2px solid #e2aa0f;
+}
+
+.inpwrap.active-input .inp-anim {
+  border: 2px solid #10cc84;
+}
+
+.inpwrap .erreur {
+  border: 2px solid #e20f0f !important;
+}
+
+.inpwrap .visible {
+  display: block !important;
+}
+
+.inpwrap .red {
+  color: #e20f0f !important;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,70 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Melvetica, sans-serif;
+    background: #575454;
+}
+
+.inpwrap{
+    width: 70%;
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    span{
+        position: absolute;
+        left: 5px;
+        top: 90px;
+        color: red;
+        font-weight: bold;
+        display: none;
+    }
+    .inp-anim{
+        width: 100%;
+        padding: 25px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-size: 25px;
+        transition: border .2s ease-out;
+    }
+    label{
+        font-size: 25px;
+        position: absolute;
+        color: #333;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-left: 25px;
+        transition: all .3s ease-out;
+    }
+    &:focus-within label{
+        top: -24px;
+        padding-left: 2px;
+        color: #e2aa0f;
+    }
+    &.active-input label{
+        top: -24px;
+        padding-left: 2px;
+        color: #10cc84;
+    }
+    &:focus-within .inp-anim{
+        border: 2px solid #e2aa0f;
+    }
+    &.active-input .inp-anim{
+        border: 2px solid #10cc84;
+    }
+    .erreur{
+        border: 2px solid #e20f0f!important;
+    }
+    .visible{
+        display: block!important;
+    }
+    .red{
+        color: #e20f0f!important;
+    }
+}
